@@ -141,5 +141,10 @@ if __name__ == '__main__':
     flask_thread = Thread(target=App.run_flask)
     flask_thread.start()
 
+    # Give Flask a moment to start up
+    time.sleep(1)
+    # Open the web browser
+    App.open_browser()
+
     # Run the main function
     main()
